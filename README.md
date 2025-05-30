@@ -1,6 +1,6 @@
 # Unity Interaktivna Prezentacija
 
-> **IMPORTANT:** Zbog prirode predmeta, sadržaj ovog projekta je na **srpskom jeziku**.
+> **IMPORTANT:** Due to the nature of the course, the contents of this presentation are in **serbian**.
 
 ---
 

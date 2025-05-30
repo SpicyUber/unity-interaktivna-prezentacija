@@ -28,9 +28,16 @@ public class Origin : MonoBehaviour
 
     private void OnDrawGizmos()
     {
+        Vector3 tempLocalScale = transform.localScale;
+        Vector3 tempPos = transform.position;
+
         if(!areTilesInst && tilemapWidth>0)
         {
+           
             DeleteTiles();
+            this.transform.position = Vector3.zero;
+
+            this.transform.localScale = Vector3.one;
             GameObject t;
             int k = 1;
             for (int i = -tilemapWidth/2; i < tilemapWidth / 2; i++) {
@@ -44,10 +51,10 @@ public class Origin : MonoBehaviour
             }
             areTilesInst = true;
         }
-       
-        this.transform.position = Vector3.zero;
+        transform.localScale = tempLocalScale;
+        transform.position = tempPos;
         this.transform.rotation = Quaternion.identity;
-        this.transform.localScale = Vector3.one;
+
         if (visible) { 
         Gizmos.color = Color.red;
         Gizmos.DrawLine(Vector3.zero, Vector3.right* tilemapWidth / 2);

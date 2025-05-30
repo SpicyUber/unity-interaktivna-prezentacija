@@ -7,9 +7,9 @@ public class BallScript : MonoBehaviour
 {
     private Rigidbody2D rb;
     public Transform StartPos;
-    public int X;
-    public int Y;
+   
     public GameObject BallShadow;
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -32,10 +32,21 @@ public class BallScript : MonoBehaviour
         }
         else
         {
-            rb.AddForce(new Vector2(X, Y));
+           
+            StartCoroutine(BallThrow());
+          
 
         }
     }
+
+    IEnumerator BallThrow()
+    {
+        rb.isKinematic = true;
+        yield return new WaitForSeconds(1f);
+        rb.isKinematic = false;
+        rb.AddForce(FindObjectOfType<BallForce>().BallForceVector);
+    }
+
     void OnDrawGizmos()
     {
         if (StartPos == null)

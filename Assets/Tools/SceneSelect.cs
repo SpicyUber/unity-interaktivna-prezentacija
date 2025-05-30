@@ -4,6 +4,26 @@ using UnityEditor.SceneManagement;
 
 public class SceneShortcutWindow : EditorWindow
 {
+
+
+    [InitializeOnLoad]
+    public static class SceneShortcutAutoOpen
+    {
+        static SceneShortcutAutoOpen()
+        {
+            EditorApplication.delayCall += OpenWindow;
+        }
+
+        private static void OpenWindow()
+        {
+             
+            if (!EditorWindow.HasOpenInstances<SceneShortcutWindow>())
+            {
+                SceneShortcutWindow.ShowWindow();
+            }
+        }
+    }
+
     [MenuItem("Tools/Scene Shortcuts")]
     public static void ShowWindow()
     {
@@ -14,17 +34,17 @@ public class SceneShortcutWindow : EditorWindow
     {
         GUILayout.Label("Scene Shortcuts", EditorStyles.boldLabel);
 
-        // Get all the scenes in the project
+       
         var scenes = EditorBuildSettings.scenes;
 
         foreach (var scene in scenes)
         {
             string sceneName = System.IO.Path.GetFileNameWithoutExtension(scene.path);
 
-            // Display a button for each scene
+            
             if (GUILayout.Button(sceneName))
             {
-                // Load the scene when clicked
+                
                 if (EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo())
                 {
                     EditorSceneManager.OpenScene(scene.path);

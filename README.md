@@ -17,7 +17,7 @@ Na kraju prezentacije se nalazi **prosta survival igrica** koja služi kao prime
 
 * Odabrao koncepte koji se obrađuju
 * Isplanirao i napravio prezentaciju koja se može videti u *Game View*-u
-* Implementirao logiku koja čini prezentaciju interaktivnom (Najčešće u *Scene View*-u  kroz C# skripte:
+* Implementirao logiku koja čini prezentaciju interaktivnom (Najčešće u *Scene View*-u)  kroz C# skripte:
 
   * Mini igra sa transformom
   * Kalkulator vektora

@@ -8,8 +8,8 @@
 
 Interaktivna prezentacija koja služi kao uvod u Unity i osnovne komponente unutar Unity-ja.
 Ova prezentacija je propratni materijal uz samo predavanje. Cilj je da se studenti **igraju sa prezentacijom tokom predavanja** i time praktično testiraju teorijske koncepte.
-
 Na kraju prezentacije se nalazi **prosta survival igrica** koja služi kao primer primene do tada naučenih koncepata.
+Video primer korišćenja prezentacije možete videti [ovde.](https://drive.google.com/file/d/1MKED8tPTpddZ-TxxTsFRPYEmlSUxx7uc/view?usp=sharing)
 
 ---
 
@@ -17,13 +17,13 @@ Na kraju prezentacije se nalazi **prosta survival igrica** koja služi kao prime
 
 * Odabrao koncepte koji se obrađuju
 * Isplanirao i napravio prezentaciju koja se može videti u *Game View*-u
-* Implementirao logiku koja čini prezentaciju interaktivnom (Najčešće u *Scene View*-u)  kroz C# skripte:
+* Implementirao logiku koja čini prezentaciju interaktivnom (Najčešće u *Scene View*-u)  kroz C# skripte. Interaktivni delovi podrazumevaju:
 
-  * Mini igra sa transformom
+  * Mini igru sa transformom
   * Kalkulator vektora
-  * Vizualizacija World Space vs Local Space
-  * Rigidbody mini igra
-  * Zombi igra
+  * Vizualizaciju World Space vs Local Space
+  * Rigidbody mini igru
+  * Zombi igru
 * Uživo održao predavanje koristeći ovu prezentaciju na predmetu **Simulacija i simulacioni jezici** na **Fakultetu organizacionih nauka**
 
 ---
